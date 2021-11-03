@@ -1,0 +1,6 @@
+
+1. You are giving the initial position point (0,0,N).
+2. 0,0 are X and Y co-ordinates on a grid of (5,5).
+3. N is the direction the first Rover is currently facing.
+4. L and R allow the rover to rotate left and right.
+5. M allows the rover to move one point to another in the current direction.
