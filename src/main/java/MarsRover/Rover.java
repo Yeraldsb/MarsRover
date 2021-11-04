@@ -1,4 +1,4 @@
-package imperative;
+package MarsRover;
 
 public class Rover {
 
