@@ -14,15 +14,15 @@ public class Rover {
     }
 
     public void printPosition() {
-        char dir = 'N';
+        String dir = direction;
         if (facing == 1) {
-            dir = 'N';
+            dir = "N";
         } else if (facing == 2) {
-            dir = 'E';
+            dir = "E";
         } else if (facing == 3) {
-            dir = 'S';
+            dir = "S";
         } else if (facing == 4) {
-            dir = 'W';
+            dir = "W";
         }
         System.out.println(x  + " "  + y   + " " +  dir);
     }
@@ -68,14 +68,14 @@ public class Rover {
     }
 
     public String turnLeft() {
-        if (direction == "N") {
-            return "W";
-        } else if (direction == "W"){
-            return "S";
-        }if (direction == "S"){
-            return "E";
-        }else {
+        if (direction == "E") {
             return "N";
+        } else if (direction == "N"){
+            return "W";
+        }if (direction == "W"){
+            return "S";
+        }else {
+            return "E";
         }
     }
 
