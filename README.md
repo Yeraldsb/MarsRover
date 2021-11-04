@@ -17,13 +17,13 @@ Each rover will be finished sequentially, which means that the second rover won'
 
 The output for each rover should be its final coordinates and heading.
 
-Input:
-5 5
-1 2 N
-LMLMLMLMM
-3 3 E
-MMRMMRMRRM
+Input: <br>
+5 5   <br>
+1 2 N   <br>
+LMLMLMLMM   <br>
+3 3 E   <br>
+MMRMMRMRRM  <br> 
 
-Output:
-1 3 N
+Output:  <br>
+1 3 N  <br>
 5 1 E
