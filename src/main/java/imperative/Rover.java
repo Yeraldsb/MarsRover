@@ -13,21 +13,6 @@ public class Rover {
         this.direction = direction;
     }
 
-    public void printPosition() {
-        String dir = direction;
-        if (facing == 1) {
-            dir = "N";
-        } else if (facing == 2) {
-            dir = "E";
-        } else if (facing == 3) {
-            dir = "S";
-        } else if (facing == 4) {
-            dir = "W";
-        }
-        System.out.println(x  + " "  + y   + " " +  dir);
-    }
-
-
     public String execute(String commands) {
         for (char c : commands.toCharArray()){   //manipulate individual characters in a string as list items
             if (c == 'R'){
@@ -77,6 +62,19 @@ public class Rover {
         }else {
             return "E";
         }
+    }
+    public void printPosition() {
+        String dir = direction;
+        if (facing == 1) {
+            dir = "N";
+        } else if (facing == 2) {
+            dir = "E";
+        } else if (facing == 3) {
+            dir = "S";
+        } else if (facing == 4) {
+            dir = "W";
+        }
+        System.out.println(x  + " "  + y   + " " +  dir);
     }
 
     public static void main(String[] args) {
