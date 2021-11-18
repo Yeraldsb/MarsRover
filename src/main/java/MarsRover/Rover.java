@@ -2,6 +2,9 @@ package MarsRover;
 
 public class Rover {
 
+    TurnRight turnRight = new TurnRight();
+    TurnLeft turnLeft = new TurnLeft();
+
     String direction = "N";
     char facing = 'N';
     int x = 0;
@@ -16,10 +19,10 @@ public class Rover {
     public String execute(String commands) {
         for (char c : commands.toCharArray()){   //manipulate individual characters in a string as list items
             if (c == 'R'){
-                direction = turnRight();
+                direction = turnRight.turnRight(direction);
             }
             if (c == 'L'){
-                direction = turnLeft();
+                direction = turnLeft.turnLeft(direction);
             }
             if (c == 'M'){
                 move();
@@ -39,42 +42,8 @@ public class Rover {
             this.x--;
         }
     }
-
-    public String turnRight() {
-        if (direction == "N") {
-            return "E";
-        } else if (direction == "E"){
-            return "S";
-        }if (direction == "S"){
-            return "W";
-        }else {
-            return "N";
-        }
-    }
-
-    public String turnLeft() {
-        if (direction == "E") {
-            return "N";
-        } else if (direction == "N"){
-            return "W";
-        }if (direction == "W"){
-            return "S";
-        }else {
-            return "E";
-        }
-    }
     public void printPosition() {
-        String dir = direction;
-        if (facing == 1) {
-            dir = "N";
-        } else if (facing == 2) {
-            dir = "E";
-        } else if (facing == 3) {
-            dir = "S";
-        } else if (facing == 4) {
-            dir = "W";
-        }
-        System.out.println(x  + " "  + y   + " " +  dir);
+        System.out.println(x  + " "  + y   + " " +  direction);
     }
 
     public static void main(String[] args) {

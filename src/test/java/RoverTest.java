@@ -65,13 +65,30 @@ public class RoverTest {
     public static Object[] testValuesIfTheRoverMovesToTheRight(){
         return new Object[]{
 
-                new String[]{"RM","1,0,E"},
-                new String[]{"RMMMMM","5,0,E"},
+                new String[]{"MMRMMRMRRM","5,1,E"},
+                new String[]{"RMRR","3,2,N"},
+                new String[]{"RMRRMR","3,3,E"},
+                new String[]{"RMMRRMRMR","4,2,S"},
         };
     }
     @Test
     @Parameters(method = "testValuesIfTheRoverMovesToTheRight")
     public void ifTheRoverMovesRight(String commands, String direction){
+        rover.setPosition(3,3, "E");
+        assertThat(rover.execute(commands), is(direction));
+    }
+
+    public static Object[] testValuesIfTheRoverMovesToTheLeft(){
+        return new Object[]{
+
+                new String[]{"LMLMLMLMM","1,3,N"},
+
+        };
+    }
+    @Test
+    @Parameters(method = "testValuesIfTheRoverMovesToTheLeft")
+    public void ifTheRoverMovesLeft(String commands, String direction){
+        rover.setPosition(1,2, "N");
         assertThat(rover.execute(commands), is(direction));
     }
 
